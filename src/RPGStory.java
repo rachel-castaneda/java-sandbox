@@ -15,7 +15,7 @@ public class RPGStory {
         System.out.println("hello agent "+charName + " unfortunately since you went AWOL a month ago, " +
                 "\nthe CIA has been chasing you down. While on the run you have been accused on serious charges of treason. " +
                 "\nNow is your chance to clear your name and make it back home. \ngood luck agent "+charName);
-        System.out.println("would you like to start your adventure? [yes/no] ");
+        System.out.println("would you like to start a mission? [yes/no] ");
         String newGame = scanner.next();
         while (newGame.equalsIgnoreCase("no"))
             return;
