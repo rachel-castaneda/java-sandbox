@@ -45,6 +45,7 @@ public class GymApp {
     }
 
     // create an array of memberships
+
     // add a member, add membership to array, increase total members
     public static Membership[] addMember(Membership[] oldMembershipArray, Membership newMembership) {
         Membership[] returnArray;
