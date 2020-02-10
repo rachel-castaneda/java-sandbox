@@ -2,3 +2,5 @@ banana
 orange
 peach
 pineapple
+kiwi
+star fruit

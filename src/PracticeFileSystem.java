@@ -11,7 +11,8 @@ public class PracticeFileSystem {
         newFile();
         writeFile();
 //        readFile();
-//        readWriteFile();
+        readWriteFile();
+//        newPoem();
 
     } // main class end
     static void newFile() {
@@ -49,19 +50,42 @@ public class PracticeFileSystem {
 
     } // write file end
 
-    static void readFile() {
+//    static void newPoem() {
+//
+//        String directory = "data";
+//        String filename = "poem.txt";
+//
+//        Path dataDirectory = Paths.get(directory);
+//        System.out.println(dataDirectory.toAbsolutePath());
+//        Path dataFile = Paths.get(directory, filename);
+//
+//        try {
+//            if (Files.notExists(dataDirectory)) {
+//                Files.createDirectories(dataDirectory);
+//            }
+//
+//            if (!Files.exists(dataFile)) {
+//                Files.createFile(dataFile);
+//            }
+//        } catch (IOException ioe) {
+//            ioe.printStackTrace();
+//        } // try - catch block
+//
+//    }
 
-        try {
-            Path poemFile = Paths.get("europa", "poem.txt");
-            List<String> poemLines = Files.readAllLines(poemFile);
-            for (String line : poemLines) {
-                System.out.println(line);
-            }
-        } catch (IOException ioe) {
-            ioe.printStackTrace();
-        }
-
-    }
+//    static void readFile() {
+//
+//        try {
+//            Path poemFile = Paths.get("data", "poem.txt");
+//            List<String> poemLines = Files.readAllLines(poemFile);
+//            for (String line : poemLines) {
+//                System.out.println(line);
+//            }
+//        } catch (IOException ioe) {
+//            ioe.printStackTrace();
+//        }
+//
+//    }
 
     static void readWriteFile() {
         List <String> fruit = new ArrayList<>();
