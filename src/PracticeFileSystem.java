@@ -51,33 +51,37 @@ public class PracticeFileSystem {
 
     static void readFile() {
 
-//        try {
-//            Path poemFile = Paths.get("europa", "poem.txt");
-//            List<String> poemLines = Files.readAllLines(poemFile);
-//
-//        }
+        try {
+            Path poemFile = Paths.get("europa", "poem.txt");
+            List<String> poemLines = Files.readAllLines(poemFile);
+            for (String line : poemLines) {
+                System.out.println(line);
+            }
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
 
     }
 
-//    static void readWriteFile() {
-//        List <String> fruit = null;
-//        try {
-//            Path groceries = Paths.get("data", "groceries.txt");
-//            fruit Files.readAllLines(groceries);
-//            for (String line : fruit) {
-//                System.out.println(line);
-//            }
-//        } catch (IOException ioe){
-//            ioe.printStackTrace();
-//        }
-//
-//        fruit.add("kiwi"); fruit.add("star fruit");
-//        try {
-//            Path.groceries = Paths.get("data", "groceries.txt");
-//            Files.write(groceries, fruit);
-//        } catch (IOException ioe) {
-//            ioe.printStackTrace();
-//        }
-//    }
+    static void readWriteFile() {
+        List <String> fruit = new ArrayList<>();
+        try {
+            Path groceries = Paths.get("data", "groceries.txt");
+            fruit = Files.readAllLines(groceries);
+            for (String line : fruit) {
+                System.out.println(line);
+            }
+        } catch (IOException ioe){
+            ioe.printStackTrace();
+        }
+
+        fruit.add("kiwi"); fruit.add("star fruit");
+        try {
+            Path groceries = Paths.get("data", "groceries.txt");
+            Files.write(groceries, fruit);
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
+    }
 
 } // public class end
