@@ -1,12 +1,12 @@
 public class Membership {
-    private Person person;
+    private Person2 person;
     private String membershipType;
     private double membershipCost;
     private String subscription;
     private boolean active;
 
 
-    public Membership(Person person, String membershipType, double membershipCost, String subscription, boolean active) {
+    public Membership(Person2 person, String membershipType, double membershipCost, String subscription, boolean active) {
         this.person = person;
         this.membershipType = membershipType;
         this.membershipCost = membershipCost;
@@ -15,7 +15,7 @@ public class Membership {
     }
 
     // setters
-    public void setPerson (Person person) {
+    public void setPerson (Person2 person) {
         this.person = person;
     }
     public void setMembershipType (String membershipType) {
@@ -32,7 +32,7 @@ public class Membership {
     }
 
     // getters
-    public Person getPerson () {
+    public Person2 getPerson () {
         return this.person;
     }
     public String getMembershipType () {

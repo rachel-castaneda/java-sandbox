@@ -1,4 +1,3 @@
-import java.lang.reflect.Member;
 import java.util.Arrays;
 
 public class GymApp {
@@ -16,9 +15,9 @@ public class GymApp {
 
     public static void main (String [] args) {
         // initial persons
-        Person hung = new Person("hung", "ly", 180, 1, new String[]{"lose 10lbs", "get stronger"});
-        Person charlie = new Person("charlie", "delgado", 130, 2, new String[]{"gain 10lbs", "get stronger"});
-        Person paris = new Person("paris", "tyus", 260, 3, new String[]{"lose 10lbs", "get buff"});
+        Person2 hung = new Person2("hung", "ly", 180, 1, new String[]{"lose 10lbs", "get stronger"});
+        Person2 charlie = new Person2("charlie", "delgado", 130, 2, new String[]{"gain 10lbs", "get stronger"});
+        Person2 paris = new Person2("paris", "tyus", 260, 3, new String[]{"lose 10lbs", "get buff"});
 
         // initial memberships
         Membership member1 = new Membership(hung, "elite", 40.00, "monthly", true);
@@ -36,7 +35,7 @@ public class GymApp {
 
         System.out.println("total members: " + GymApp.getTotalMembers());
         app.addMember(app.memberships, new Membership(
-                new Person("rachel", "castaneda", 110, 4, new String[]{"gain muscle", "do 2 push-ups"}), "elite", 400.00, "annual", true)
+                new Person2("rachel", "castaneda", 110, 4, new String[]{"gain muscle", "do 2 push-ups"}), "elite", 400.00, "annual", true)
         );
         System.out.println("total members: " + GymApp.getTotalMembers());
 //        app.getTotalMembers();
@@ -59,7 +58,7 @@ public class GymApp {
     // delete a member
 
     // print person info
-    public static void printPersonInfo (Person personObj) {
+    public static void printPersonInfo (Person2 personObj) {
             System.out.printf("person's information below: \n");
             System.out.printf("first name: %s \n" +
                     "last Name: %s \n" +

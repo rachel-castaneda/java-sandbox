@@ -1,41 +1,42 @@
-public class Person {
-    public String firstName;
-    public String lastName;
-    private int weight;
-    private int memberID;
-    private String[] goals;
+public class Person implements GreeterTest {
 
-    // constructor method
-    public Person(String first, String last, int weight, int memberID, String[] goals) {
-        this.firstName = first;
-        this.lastName = last;
-        this.weight = weight;
-        this.memberID = memberID;
-        this.goals = goals;
+    private String firstName;
+    private String lastName;
+
+    public static void main (String [] args) {
+        Person person = new Person ("harry", "potter");
+//        System.out.println(person.sayHello());
     }
 
-    // setters
-    public void setFirstName (String firstName) {
+    Person (String firstName, String lastName) {
+        if (firstName == null) {
+            throw new IllegalArgumentException("thats not a name, stop it.");
+        } else if (lastName == null) {
+            throw new IllegalArgumentException("choose a better last name, cause thats nothing");
+        } else {
+            this.firstName = firstName;
+            this.lastName = lastName;
+        }
+    }
+
+    public void setFirstName() {
         this.firstName = firstName;
     }
-    public void setLastName (String lastName) {
+
+    public void setLastName() {
         this.lastName = lastName;
     }
-    public void setWeight (int weight) {
-        this.weight = weight;
+
+    public String getFirstName() {
+        return firstName;
     }
 
-    // getter
-    public int getWeight () {
-        return this.weight;
-    }
-    public int getMemberID() {
-        return this.memberID;
-    }
-    public String[] getGoals(){
-       return this.goals;
+    public String getLastName() {
+        return lastName;
     }
 
-
+    public String sayHello() {
+        return "hello from " + firstName + " " + lastName + ".";
+    }
 
 }
